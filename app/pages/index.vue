@@ -21,11 +21,19 @@
 
       <p class="text-red-500">This is index</p>
 
-      <p class="text-gray-700 dark:text-gray-300">author: {{ author }}</p>
-      <p class="text-gray-700 dark:text-gray-300">author: {{ authors }}</p>
+      <div class="py-2">
+        <div class="flex items-center gap-4 mb-2">
+          <img :src="author?.avatar" class="w-8 rounded-full">
+          <p class="text-gray-700 dark:text-gray-300 font-semibold">{{ author?.name }}</p>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-xs">author: {{ author }}</p>
+      </div>
+      
+      <div class="">
+        <p class="text-gray-700 dark:text-gray-300">author: {{ authors }}</p>        
+      </div>
 
     </div>    
   </div>
-
-
 </template>
